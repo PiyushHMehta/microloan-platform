@@ -1,0 +1,77 @@
+nameOverride: "zea-2026-b02-piyushm-microloan"
+fullnameOverride: "zea-2026-b02-piyushm-microloan"
+clusterName: zea-2026-b02-piyushm-microloan
+hpa:
+  enabled: false
+
+replicaCount: 1
+image:
+  repository: 813361731051.dkr.ecr.ap-south-1.amazonaws.com
+  repositoryPath: zea-2026-b02-piyushm-microloan
+  # repositoryPath: olympus-native-app-m02-lu03-akhilesh
+  pullPolicy: Always
+  tag: 0.0.1
+
+disablePropertiesConfigMap: true
+
+envProperties:
+  javaXms: 128M
+  javaXmx: 512M
+  APP_NAME: zea-2026-b02-piyushm-microloan
+  KINESIS_ACCESSKEY: vault:secrets/data/zone/common/logging#KINESIS_ACCESSKEY
+  KINESIS_SECRETKEY: vault:secrets/data/zone/common/logging#KINESIS_SECRETKEY
+  KINESIS_REGION: vault:secrets/data/zone/common/logging#KINESIS_REGION
+
+resources:
+  limits:
+    memory: 2Gi
+  requests:
+    cpu: 1
+    memory: 1Gi
+
+serviceAccountName: zea-2026-b02-piyushm-microloan
+
+service:
+  targetPort: 8080
+  port: 8080
+  jolokiaPort: 8778
+  healthCheckPath: /health
+  livenessProbeInitialDelaySeconds: 90
+
+httpHealthCheckServiceMonitor:
+  enabled: false
+serviceMonitor:
+  enabled: true
+  monitors:
+    - name: prometheus
+      labels:
+        prometheus: zone-monitoring
+      path: /_metrics
+      port: http
+      scrapeTimeout: 10s
+      interval: 30s
+      matchLabels:
+        app.kubernetes.io/name: zea-2026-b02-piyushm-microloan
+        app: zea-2026-b02-piyushm-microloan
+    - name: micrometer
+      labels:
+        prometheus: zone-monitoring
+      path: /actuator/prometheus
+      port: http
+      scrapeTimeout: 10s
+      interval: 60s
+      matchLabels:
+        app.kubernetes.io/name: zea-2026-b02-piyushm-microloan
+        app: zea-2026-b02-piyushm-microloan
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
+priorityClassName: zea-2026-b02-piyushm-microloan
+olympusLabels:
+  olympusCluster: ccetest
+  olympusClusterBU: DevWorld
+  olympusClusterTeam: devworld
+  olympusZone: aws-ow-mumbai
+  olympusZoneEnv: staging

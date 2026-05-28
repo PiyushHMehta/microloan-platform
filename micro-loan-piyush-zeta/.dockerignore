@@ -1,0 +1,17 @@
+# Exclude non-essential build artifacts
+target/*-sources.jar
+target/*-test-sources.jar
+target/*.jar.original
+target/maven-archiver/
+target/maven-status/
+target/surefire-reports/
+target/generated-sources/
+target/generated-test-sources/
+target/test-classes/
+
+# Exclude source code and IDE files
+src/
+.git/
+.gitignore
+*.md
+helm-chart/

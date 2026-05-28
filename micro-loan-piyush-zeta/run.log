@@ -1,0 +1,224 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< in.zeta:zea-2026-b02-piyushm-microloan >---------------
+[INFO] Building zea-2026-b02-piyushm-microloan 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.5.7:run (default-cli) > test-compile @ zea-2026-b02-piyushm-microloan >>>
+[WARNING] 1 problem was encountered while building the effective model for org.javassist:javassist:jar:3.18.2-GA during dependency collection step for project (use -X to see details)
+[WARNING] 1 problem was encountered while building the effective model for org.javassist:javassist:jar:3.20.0-GA during dependency collection step for project (use -X to see details)
+[INFO] 
+[INFO] --- enforcer:3.0.0:enforce (enforce-no-snapshots) @ zea-2026-b02-piyushm-microloan ---
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (default) @ zea-2026-b02-piyushm-microloan ---
+[INFO] argLine set to -javaagent:/Users/piyushm/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/Users/piyushm/Documents/zeta/microloan-platform/micro-loan-piyush-zeta/target/jacoco.exec
+[INFO] 
+[INFO] --- git-changelog-maven-plugin:1.92:git-changelog (GenerateGitChangelogIgnoreCommitsOlderThan) @ zea-2026-b02-piyushm-microloan ---
+[INFO] Extended variables:
+[INFO] #
+[INFO] # Wrote: /Users/piyushm/Documents/zeta/microloan-platform/micro-loan-piyush-zeta/CHANGELOG.md
+[INFO] #
+[INFO] 
+[INFO] --- resources:3.2.0:resources (default-resources) @ zea-2026-b02-piyushm-microloan ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/piyushm/Documents/zeta/microloan-platform/micro-loan-piyush-zeta/src/main/db
+[INFO] Copying 11 resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ zea-2026-b02-piyushm-microloan ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.2.0:testResources (default-testResources) @ zea-2026-b02-piyushm-microloan ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ zea-2026-b02-piyushm-microloan ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot:3.5.7:run (default-cli) < test-compile @ zea-2026-b02-piyushm-microloan <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.5.7:run (default-cli) @ zea-2026-b02-piyushm-microloan ---
+[INFO] Attaching agents: []
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2026-05-03T11:27:47.098486Z main WARN Initializing dynamic log4Olympus config with inputs => directoryPath [ /app/dynamicL4O2Config ], pollInterval [ 10000 ], loggerPrefix [ log4olympus ], rootLoggerName [ root ]
+[DynamicLogConfigHandler] => Skipping init of setup for processing dynamic log level config due to missing directory at path [ /app/dynamicL4O2Config ]. Provision the directory at the specified path and restart your application to fix it.
+2026-05-03T11:27:47.101812Z main WARN Failed to process dynamic log level config due to no directory at path [ /app/dynamicL4O2Config ]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+2026-05-03T16:57:47.250+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] .z.Zea2026B02PiyushmMicroloanApplication : Starting Zea2026B02PiyushmMicroloanApplication using Java 17.0.16 with PID 9974 (/Users/piyushm/Documents/zeta/microloan-platform/micro-loan-piyush-zeta/target/classes started by piyushm in /Users/piyushm/Documents/zeta/microloan-platform/micro-loan-piyush-zeta)
+2026-05-03T16:57:47.250+05:30 DEBUG [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] .z.Zea2026B02PiyushmMicroloanApplication : Running with Spring Boot v3.5.7, Spring v6.2.12
+2026-05-03T16:57:47.250+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] .z.Zea2026B02PiyushmMicroloanApplication : The following 1 profile is active: "local"
+2026-05-03T16:57:47.964+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-03T16:57:48.092+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 9 JPA repository interfaces.
+2026-05-03T16:57:48.174+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] o.m.MetricLogger                         : Using STRING format for metric logs
+2026-05-03T16:57:48.175+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] o.m.MetricCleanupService                 : MetricCleanupService started with interval: 1 MINUTES
+2026-05-03T16:57:48.175+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] o.m.MetricLogger                         : MetricCleanupService enabled with interval: 1 minutes
+2026-05-03T16:57:48.501+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+May 03, 2026 4:57:48 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+May 03, 2026 4:57:48 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Tomcat]
+May 03, 2026 4:57:48 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet engine: [Apache Tomcat/10.1.48]
+May 03, 2026 4:57:48 PM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring embedded WebApplicationContext
+2026-05-03T16:57:48.544+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1274 ms
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2026-05-03T16:57:48.563+05:30  WARN [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] i.z.s.b.c.l.LogbookAutoConfiguration     : {"flowId":"ad372da6-a030-46d6-b766-c9507e2153c7","id":"1","type":"Warn","time":{"sec":1777807668,"micros":553876},"title":"Logbook configuration","level":"WARN","attributes":{"enableRequestLog":"true","enableResponseLog":"true","excludedAPIList":""}}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Environment: local || Testing: false
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+2026-05-03T16:57:48.827+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2026-05-03T16:57:48.917+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@154cbb46
+2026-05-03T16:57:48.918+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2026-05-03T16:57:48.930+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] o.f.c.i.r.ResourceNameValidator          : 1 SQL migrations were detected but not run because they did not follow the filename convention.
+2026-05-03T16:57:48.930+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] o.f.c.i.r.ResourceNameValidator          : Set 'validateMigrationNaming' to true to fail fast and see a list of the invalid file names.
+2026-05-03T16:57:48.932+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] o.f.c.FlywayExecutor                     : Database: jdbc:postgresql://localhost:5432/microloan_db (PostgreSQL 16.3)
+2026-05-03T16:57:48.971+05:30  WARN [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected resolved migration not applied to database: 0.0.1.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.2.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.3.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.4.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.5.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.6.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.7.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.8.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.9.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+2026-05-03T16:57:48.971+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2026-05-03T16:57:48.972+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+May 03, 2026 4:57:48 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Tomcat]
+2026-05-03T16:57:48.984+05:30  INFO [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-03T16:57:48.994+05:30 ERROR [zea-2026-b02-piyushm-microloan,,] 9974 --- [zea-2026-b02-piyushm-microloan] [           main] o.s.b.SpringApplication                  : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected resolved migration not applied to database: 0.0.1.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.2.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.3.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.4.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.5.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.6.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.7.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.8.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.9.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at in.zeta.zea_2026_b02_piyushm_microloan.Zea2026B02PiyushmMicroloanApplication.main(Zea2026B02PiyushmMicroloanApplication.java:20) ~[classes/:?]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected resolved migration not applied to database: 0.0.1.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.2.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.3.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.4.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.5.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.6.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.7.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.8.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.9.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.12.jar:6.2.12]
+	... 10 more
+Caused by: org.flywaydb.core.api.exception.FlywayValidateException: Validate failed: Migrations have failed validation
+Detected resolved migration not applied to database: 0.0.1.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.2.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.3.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.4.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.5.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.6.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.7.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.8.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Detected resolved migration not applied to database: 0.0.9.
+To ignore this migration, set -ignoreMigrationPatterns='*:ignored'. To allow executing this migration, set -outOfOrder=true.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.flywaydb.core.Flyway.lambda$migrate$1(Flyway.java:201) ~[flyway-core-11.7.2.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:210) ~[flyway-core-11.7.2.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:188) ~[flyway-core-11.7.2.jar:?]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.5.7.jar:3.5.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.12.jar:6.2.12]
+	... 10 more
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.555 s
+[INFO] Finished at: 2026-05-03T16:57:49+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.5.7:run (default-cli) on project zea-2026-b02-piyushm-microloan: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

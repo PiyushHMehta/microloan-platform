@@ -1,0 +1,1 @@
+ALTER TABLE repayment ADD COLUMN balance_after NUMERIC(12,2);
