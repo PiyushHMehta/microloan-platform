@@ -1,0 +1,248 @@
+global:
+  clusterName: {{ .Release.Namespace }}
+  clusterVersion: 0.0.1
+  moduleLabels:
+    module: {{ .Release.Namespace }}
+    version: 0.0.1
+
+resourceRequirements:
+  god:
+    atroposTopics:
+      borrower-registered-topic:
+        syncPriority: "-20"
+        name: _system_0_borrower-registered
+        retentionPeriodInDays: 1
+
+      kyc-status-updated-topic:
+        syncPriority: "-20"
+        name: _system_0_kyc-status-updated
+        retentionPeriodInDays: 1
+
+      loan-issued-topic:
+        syncPriority: "-20"
+        name: _system_0_loan-issued
+        retentionPeriodInDays: 1
+
+      loan-rejected-topic:
+        syncPriority: "-20"
+        name: _system_0_loan-rejected
+        retentionPeriodInDays: 1
+
+      loan-overdue-topic:
+        syncPriority: "-20"
+        name: _system_0_loan-overdue
+        retentionPeriodInDays: 1
+
+      loan-closed-topic:
+        syncPriority: "-20"
+        name: _system_0_loan-closed
+        retentionPeriodInDays: 1
+
+      repayment-made-topic:
+        syncPriority: "-20"
+        name: _system_0_repayment-made
+        retentionPeriodInDays: 1
+
+      loan-application-approved-topic:
+        syncPriority: "-20"
+        name: _system_0_loan-application-approved
+        retentionPeriodInDays: 1
+
+      kfs-generated-topic:
+        syncPriority: "-20"
+        name: _system_0_kfs-generated
+        retentionPeriodInDays: 1
+
+    atroposSubscriptions:
+
+      borrower-registered-notification-subscription:
+        syncPriority: "-10"
+        subscriptionType: webhook
+        subscriptionID: subscription_0_borrower_registered_notification_piyushm
+        subscriber: zea-2026-b02-piyushm-microloan-notif
+        topic: _system_0_borrower-registered
+        transformerJS: |-
+          function transform(payload, sender) {
+              return JSON.stringify(payload.data);
+          }
+        webhookRequest: |-
+          {
+            "method": "POST",
+            "url": "https://microloannotif-{{ .Release.Namespace.Stripped }}.internal.cce.zetaapps.in/api/notifications/webhook",
+            "postData": {
+              "mimeType": "application/json",
+              "text": "<% print(generateRequestBody(payload.data)); %>"
+            }
+          }
+
+      kyc-status-updated-notification-subscription:
+        syncPriority: "-10"
+        subscriptionType: webhook
+        subscriptionID: subscription_0_kyc_status_updated_notification_piyushm
+        subscriber: zea-2026-b02-piyushm-microloan-notif
+        topic: _system_0_kyc-status-updated
+        transformerJS: |-
+          function transform(payload, sender) {
+              return JSON.stringify(payload.data);
+          }
+        webhookRequest: |-
+          {
+            "method": "POST",
+            "url": "https://microloannotif-{{ .Release.Namespace.Stripped }}.internal.cce.zetaapps.in/api/notifications/webhook",
+            "postData": {
+              "mimeType": "application/json",
+              "text": "<% print(generateRequestBody(payload.data)); %>"
+            }
+          }
+
+      loan-issued-notification-subscription:
+        syncPriority: "-10"
+        subscriptionType: webhook
+        subscriptionID: subscription_0_loan_issued_notification_piyushm
+        subscriber: zea-2026-b02-piyushm-microloan-notif
+        topic: _system_0_loan-issued
+        transformerJS: |-
+          function transform(payload, sender) {
+              return JSON.stringify(payload.data);
+          }
+        webhookRequest: |-
+          {
+            "method": "POST",
+            "url": "https://microloannotif-{{ .Release.Namespace.Stripped }}.internal.cce.zetaapps.in/api/notifications/webhook",
+            "postData": {
+              "mimeType": "application/json",
+              "text": "<% print(generateRequestBody(payload.data)); %>"
+            }
+          }
+
+      loan-rejected-notification-subscription:
+        syncPriority: "-10"
+        subscriptionType: webhook
+        subscriptionID: subscription_0_loan_rejected_notification_piyushm
+        subscriber: zea-2026-b02-piyushm-microloan-notif
+        topic: _system_0_loan-rejected
+        transformerJS: |-
+          function transform(payload, sender) {
+              return JSON.stringify(payload.data);
+          }
+        webhookRequest: |-
+          {
+            "method": "POST",
+            "url": "https://microloannotif-{{ .Release.Namespace.Stripped }}.internal.cce.zetaapps.in/api/notifications/webhook",
+            "postData": {
+              "mimeType": "application/json",
+              "text": "<% print(generateRequestBody(payload.data)); %>"
+            }
+          }
+
+      loan-overdue-notification-subscription:
+        syncPriority: "-10"
+        subscriptionType: webhook
+        subscriptionID: subscription_0_loan_overdue_notification_piyushm
+        subscriber: zea-2026-b02-piyushm-microloan-notif
+        topic: _system_0_loan-overdue
+        transformerJS: |-
+          function transform(payload, sender) {
+              return JSON.stringify(payload.data);
+          }
+        webhookRequest: |-
+          {
+            "method": "POST",
+            "url": "https://microloannotif-{{ .Release.Namespace.Stripped }}.internal.cce.zetaapps.in/api/notifications/webhook",
+            "postData": {
+              "mimeType": "application/json",
+              "text": "<% print(generateRequestBody(payload.data)); %>"
+            }
+          }
+
+      loan-closed-notification-subscription:
+        syncPriority: "-10"
+        subscriptionType: webhook
+        subscriptionID: subscription_0_loan_closed_notification_piyushm
+        subscriber: zea-2026-b02-piyushm-microloan-notif
+        topic: _system_0_loan-closed
+        transformerJS: |-
+          function transform(payload, sender) {
+              return JSON.stringify(payload.data);
+          }
+        webhookRequest: |-
+          {
+            "method": "POST",
+            "url": "https://microloannotif-{{ .Release.Namespace.Stripped }}.internal.cce.zetaapps.in/api/notifications/webhook",
+            "postData": {
+              "mimeType": "application/json",
+              "text": "<% print(generateRequestBody(payload.data)); %>"
+            }
+          }
+
+      repayment-made-notification-subscription:
+        syncPriority: "-10"
+        subscriptionType: webhook
+        subscriptionID: subscription_0_repayment_made_notification_piyushm
+        subscriber: zea-2026-b02-piyushm-microloan-notif
+        topic: _system_0_repayment-made
+        transformerJS: |-
+          function transform(payload, sender) {
+              return JSON.stringify(payload.data);
+          }
+        webhookRequest: |-
+          {
+            "method": "POST",
+            "url": "https://microloannotif-{{ .Release.Namespace.Stripped }}.internal.cce.zetaapps.in/api/notifications/webhook",
+            "postData": {
+              "mimeType": "application/json",
+              "text": "<% print(generateRequestBody(payload.data)); %>"
+            }
+          }
+
+      loan-application-approved-notification-subscription:
+        syncPriority: "-10"
+        subscriptionType: webhook
+        subscriptionID: subscription_0_loan_application_approved_notification_piyushm
+        subscriber: zea-2026-b02-piyushm-microloan-notif
+        topic: _system_0_loan-application-approved
+        transformerJS: |-
+          function transform(payload, sender) {
+              return JSON.stringify(payload.data);
+          }
+        webhookRequest: |-
+          {
+            "method": "POST",
+            "url": "https://microloannotif-{{ .Release.Namespace.Stripped }}.internal.cce.zetaapps.in/api/notifications/webhook",
+            "postData": {
+              "mimeType": "application/json",
+              "text": "<% print(generateRequestBody(payload.data)); %>"
+            }
+          }
+
+      kfs-generated-notification-subscription:
+        syncPriority: "-10"
+        subscriptionType: webhook
+        subscriptionID: subscription_0_kfs_generated_notification_piyushm
+        subscriber: zea-2026-b02-piyushm-microloan-notif
+        topic: _system_0_kfs-generated
+        transformerJS: |-
+          function transform(payload, sender) {
+              return JSON.stringify(payload.data);
+          }
+        webhookRequest: |-
+          {
+            "method": "POST",
+            "url": "https://microloannotif-{{ .Release.Namespace.Stripped }}.internal.cce.zetaapps.in/api/notifications/webhook",
+            "postData": {
+              "mimeType": "application/json",
+              "text": "<% print(generateRequestBody(payload.data)); %>"
+            }
+          }
+
+    ganymedeRelationalStore:
+      zea-2026-b02-piyushm-microloan-db:
+        appName: zea-2026-b02-piyushm-microloan
+        dbCode: microloan_db
+        dbEngine: postgres
+
+    ddl:
+      zea-2026-b02-piyushm-microloan-ddl:
+        dbCode: microloan_db
+        dbEngine: postgres
+        script: ddl-dev-snapshot/zea-2026-b02-piyushm-microloan-ddl/V2.1.0/V2.1.0-SNAPSHOT.tar.gz

@@ -1,0 +1,29 @@
+zea-2026-b02-piyushm-microloan-notif:
+  enabled: true
+  CLUSTER_NAME: {{ .Release.Namespace }}
+  priorityClassName: {{ .Release.Namespace }}-priority
+
+  envProperties:
+    CLUSTER_NAME: {{ .Release.Namespace }}
+    ENVIRONMENT: dev
+
+    logging.level.root: INFO
+    LOGGING_PIPELINE: KINESIS_AND_SOUT
+
+    server.port: "8080"
+
+    # Required by spring-boot-commons even though the webhook is unauthenticated
+    certstore.proteus.endpoint: https://sb1-god-cipher.mum1-pp.zetaapps.in/proteus/zeta.in
+    sessions.proteus.endpoint: https://sb1-god-cipher.mum1-pp.zetaapps.in/proteus/zeta.in
+
+    # Expose actuator at root so /health works for k8s probes
+    management.endpoints.web.base-path: /
+
+    # ── SMTP ─────────────────────────────────────────────────────────────────
+    spring.mail.host: smtp.gmail.com
+    spring.mail.port: "587"
+    spring.mail.username: piyush.mehta22@spit.ac.in
+    spring.mail.password: jweoktiwoakfuwlz
+    spring.mail.properties.mail.smtp.auth: "true"
+    spring.mail.properties.mail.smtp.starttls.enable: "true"
+    app.mail.from: piyush.mehta22@spit.ac.in

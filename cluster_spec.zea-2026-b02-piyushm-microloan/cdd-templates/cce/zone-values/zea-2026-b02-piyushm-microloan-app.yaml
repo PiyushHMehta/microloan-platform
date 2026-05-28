@@ -1,0 +1,29 @@
+zea-2026-b02-piyushm-microloan:
+  enabled: true
+  CLUSTER_NAME: {{ .Release.Namespace }}
+  priorityClassName: {{ .Release.Namespace }}-priority
+
+  envProperties:
+    CLUSTER_NAME: {{ .Release.Namespace }}
+    ENVIRONMENT: dev
+
+    logging.level.root: INFO
+    LOGGING_PIPELINE: KINESIS_AND_SOUT
+
+    # m1 (use this)
+    # SPRING_FLYWAY_ENABLED: false
+    # SPRING_JPA_HIBERNATE_DDL_AUTO: none
+
+    # m2
+    # SPRING_FLYWAY_ENABLED: true
+    # SPRING_JPA_HIBERNATE_DDL_AUTO: validate
+
+    ## DB config
+
+    spring.datasource.url: vault:secrets/data/cluster/{{ .Release.Namespace }}/zea-2026-b02-piyushm-microloan/tenants/0/ganymede/microloan_db/master#jdbc.url
+    spring.datasource.username: vault:secrets/data/cluster/{{ .Release.Namespace }}/zea-2026-b02-piyushm-microloan/tenants/0/ganymede/microloan_db/master#username
+    spring.datasource.password: vault:secrets/data/cluster/{{ .Release.Namespace }}/zea-2026-b02-piyushm-microloan/tenants/0/ganymede/microloan_db/master#password
+
+    ## Atropos config
+    atropos.publish.mode: 'KINESIS'
+

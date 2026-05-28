@@ -1,0 +1,55 @@
+global:
+  clusterName: zea-2026-b02-piyushm-microloan
+  clusterVersion: 1.0.0
+  moduleLabels:
+    module: zea-2026-b02-piyushm-microloan
+    version: 1.0.0
+
+resourceRequirements:
+  god: {}
+
+cleaner:
+  enabled: true
+  image:
+    tag: 1.0.0
+  resources:
+    limits:
+      cpu: 1
+      memory: 1500Mi
+    requests:
+      cpu: 500m
+      memory: 750Mi
+
+reloader:
+  enabled: true
+  image:
+    tag: v1.0.103
+
+
+zea-2026-b02-piyushm-microloan:
+  enabled: true
+  image:
+    repository: 813361731051.dkr.ecr.ap-south-1.amazonaws.com
+    repositoryPath: zea-2026-b02-piyushm-microloan
+    pullPolicy: Always
+    tag: snapshot_0-0-1-SNAPSHOT_master_4524f28
+  service:
+    port: 8080
+    targetPort: 8080
+    livenessProbeInitialDelaySeconds: 120
+    readinessProbeInitialDelaySeconds: 120
+    healthCheckPath: /health
+
+zea-2026-b02-piyushm-microloan-notif:
+  enabled: true
+  image:
+    repository: 813361731051.dkr.ecr.ap-south-1.amazonaws.com
+    repositoryPath: zea-2026-b02-piyushm-microloan
+    pullPolicy: Always
+    tag: snapshot_0-0-1-SNAPSHOT_master_80d099c
+  service:
+    port: 8080
+    targetPort: 8080
+    livenessProbeInitialDelaySeconds: 90
+    readinessProbeInitialDelaySeconds: 120
+    healthCheckPath: /health

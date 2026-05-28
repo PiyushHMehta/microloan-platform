@@ -1,0 +1,8 @@
+zoneValues:
+  - zea-2026-b02-piyushm-microloan-app.yaml
+  - zea-2026-b02-piyushm-microloan-notif-app.yaml
+  - zea-2026-b02-piyushm-microloan-module.yaml
+mocks:
+  enabled: false
+  mockgroups:
+    - name: default

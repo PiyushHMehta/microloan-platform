@@ -1,0 +1,38 @@
+apiVersion: v2
+name: cluster_spec.zea-2026-b02-piyushm-microloan
+description: Cluster Spec for Micro-Loan Management System
+type: application
+version: 0.0.1-SNAPSHOT
+dependencies:
+  - name: common
+    version: 1.0.98
+    repository: '@chartrepo'
+    alias: common
+  - name: reloader
+    repository: '@chartrepo'
+    version: v0.1.2
+    alias: reloader
+    condition: reloader.enabled
+  - name: cleaner
+    version: 1.0.4
+    repository: '@chartrepo'
+    alias: cleaner
+  - name: zea-2026-b02-piyushm-microloan
+    repository: '@chartrepo'
+    version: 0.0.1-SNAPSHOT
+    alias: zea-2026-b02-piyushm-microloan
+    condition: zea-2026-b02-piyushm-microloan.enabled
+  - name: zea-2026-b02-piyushm-microloan-notif
+    repository: '@chartrepo'
+    version: 0.0.1-SNAPSHOT
+    alias: zea-2026-b02-piyushm-microloan-notif
+    condition: zea-2026-b02-piyushm-microloan-notif.enabled
+  - name: common-resource-requirement
+    version: 3.1.50
+    repository: '@chartrepo'
+keywords:
+  - zea-2026-b02-piyushm-microloan
+  - zea-2026-b02-piyushm-microloan-notif
+maintainers:
+  - name: Piyush Mehta
+    email: piyushm@zeta.tech

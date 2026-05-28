@@ -1,0 +1,33 @@
+apiVersion: zeta.tech/v1alpha1
+kind: HeraclesClusterRoute
+metadata:
+  name: micro-loan-route
+  namespace: {{ .Release.Namespace }}
+spec:
+  ingressType:
+    - internal
+    - public
+  cluster: {{ .Release.Namespace }}
+  domainClass: cluster-ingress
+  paths:
+    - /zea-2026-b02-piyushm-microloan/(.*)
+  backend:
+    port: 8080
+    service: zea-2026-b02-piyushm-microloan
+  config:
+    upstream-setting:
+      proxy-setting:
+        protocol: http
+        path: /
+        connect_timeout: 60000
+        retries: 3
+        read_timeout: 60000
+        write_timeout: 60000
+      route-setting:
+        methods: "POST,PUT,DELETE,PATCH,GET,OPTIONS"
+        preserve_host: false
+        strip_path: false
+    request-transformer:
+      my-transformer:
+        replace:
+          uri: /$(uri_captures[1])

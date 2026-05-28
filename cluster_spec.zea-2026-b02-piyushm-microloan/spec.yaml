@@ -1,0 +1,23 @@
+name: zea-2026-b02-piyushm-microloan
+version: 0.0.1
+type: cluster_spec
+upgradeAllowedFromVersions:
+  - 1.2.0 - 1.2.2
+  - 1.0.13
+  - ~1.1.0
+  - ~1.0.0 <1.0.12
+
+publisherMailingList: weave-internal@zeta.tech
+documentation:
+  url: https://weave.olympus.tech
+  source: git@bitbucket.org:zetaengg/weave-docs.git
+issueTracker:
+  - type: jira
+    purpose: idea
+    url: https://zeta-tm.atlassian.net/jira/software/c/projects/WEAVE/boards/123
+  - type: jira
+    purpose: bug
+    url: https://zeta-tm.atlassian.net/jira/software/c/projects/WEAVE/boards/234
+publisherContacts:
+  - name: Piyush Mehta
+    email: piyushm@zeta.tech

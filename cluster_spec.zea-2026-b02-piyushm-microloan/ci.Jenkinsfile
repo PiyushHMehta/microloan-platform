@@ -1,0 +1,4 @@
+@Library("ci@master") _
+ClusterSpecV2Build(
+    useNewCsFormat: true
+)
