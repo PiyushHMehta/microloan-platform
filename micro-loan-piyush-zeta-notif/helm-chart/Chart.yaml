@@ -1,0 +1,10 @@
+apiVersion: v2
+name: zea-2026-b02-piyushm-microloan-notif
+description: Micro-Loan Notification Platform
+type: application
+version: 0.0.1-SNAPSHOT
+appVersion: "0.0.1"
+dependencies:
+  - name: common
+    version: 1.0.98
+    repository: '@chartrepo'

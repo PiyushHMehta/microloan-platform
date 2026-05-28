@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="5" status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%highlight{%d{HH:mm:ss} %-5p %-30.30c{1} %-10.10t %-10.10X{flowID} - %m%n}" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <!-- App logs (Spectra/Olympus) -->
+        <Logger name="in.zeta" level="TRACE" additivity="false">
+            <AppenderRef ref="Console" />
+        </Logger>
+        <!-- Suppress metrics noise -->
+        <Logger name="olympus.metrics" level="ERROR" additivity="false">
+            <AppenderRef ref="Console" />
+        </Logger>
+        <Root level="INFO">
+            <AppenderRef ref="Console" />
+        </Root>
+        <!-- Silence Spring + Framework Logs -->
+        <Logger name="org.springframework" level="ERROR" additivity="false">
+            <AppenderRef ref="Console" />
+        </Logger>
+        <Logger name="org.apache" level="ERROR" additivity="false">
+            <AppenderRef ref="Console" />
+        </Logger>
+        <Logger name="org.hibernate" level="ERROR" additivity="false">
+            <AppenderRef ref="Console" />
+        </Logger>
+    </Loggers>
+</Configuration>
